@@ -1,0 +1,97 @@
+syntax = "proto3";
+option java_package = "com.hu.protobuf.crawer";
+option java_outer_classname = "GeneralCrawer";
+
+package hu.crawler;
+
+message DownloadItem {
+  string url = 1;
+  string data_category = 2;
+  HttpRequestConfig http_request_config = 3; //http请求相关参数
+  string transparent_transport = 4; //透传字段
+  uint64 send_ts = 5; //发送时间
+  int32 max_retry_times = 6; //最大循环次数
+  int32 current_retry_times = 7; //循环重试次数
+  string uri = 8;
+  string parser_kafka_topic = 9; //downloader 下载后发送到指定的 topic
+}
+
+message WebpageItem {
+  string url = 1;
+  string category = 2; //数据类型
+  string durl = 3; //跳转后的 url
+  uint64 dlts = 4; //下载时间
+  uint64 cost = 5; //下载耗时
+  int32 error_number = 6; //错误码
+  string error_plain = 7; //详细错误原因
+  int32 http_code = 8; //请求返回码
+  uint64 send_ts = 9; //发送时间
+  uint32 page_size = 10; //网页大小
+  string host = 11; //下载机ip
+  string transparent_transport = 12; //透传字段
+  string base64_page = 13; //输出数据内容, base64编码
+  Proxy proxy = 14;
+  map<string, string> headers = 15;
+
+}
+
+message HttpRequestConfig {
+  Method method = 1; //请求方法
+  PageMediaType page_media_type = 2; //http请求的网页媒体类型
+  map<string, string> headers = 3;
+  string user_agent = 4;
+  string referer = 5;
+  string post_data = 6;
+  bytes post_data_byte_array = 7;
+  bool not_use_proxy = 8;
+  Proxy proxy = 9;
+  ContentType content_type = 10;
+  bool disable_redirect = 12; // 是否自动 3xx 跳转重定向， 默认允许5次
+}
+
+message LogItem {
+  string url = 1;
+  string category = 2; //日志数据类型
+  string durl = 3; //跳转后的数据类型
+  uint64 dlts = 4; //下载时间点
+  uint64 cost = 5; //下载耗时
+  int32 error_number = 6; //错误码
+  string error_plain = 7; //详细错误原因
+  int32 http_code = 8; //请求返回码
+  uint64 send_ts = 9; //发送时间
+  uint32 page_size = 10; //网页大小
+  string host = 11; //下载机ip
+  string transparent_transport = 12; //透传字段
+}
+
+enum Method {
+  UNKNOW_MATHOD = 0;
+  GET = 1;
+  POST = 2;
+}
+
+enum PageMediaType {
+  TEXT = 0; //文本页面
+  IMAGE = 1; //图片
+  AUDIA = 2; // 音频
+  VIDEO = 3; //视频
+}
+
+message Proxy {
+  string host = 1;
+  uint32 port = 2;
+  string user = 3;
+  string password = 4;
+  uint64 expired_unix_ms_time = 5; //过期时间
+  string url = 6;
+}
+
+//post请求时, body 的内容类型
+enum ContentType {
+  UNKNOWN_TYPE = 0;
+  APPLICATION_JSON = 1;
+  APPLICATION_FROM_URLENCODEED = 2;
+  APPLICATION_OCTET_STREAM = 3;
+  APPLICATION_XML = 4;
+  TEXT_PLAIN = 5;
+}
