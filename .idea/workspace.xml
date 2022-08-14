@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ebae3f5-8caa-4619-b2fd-ee1d33146cda" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/spider-commons/spider-common/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spider-commons/spider-common/src/test/java/com/kafka/consumer/CustomComsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider-commons/spider-common/src/test/java/com/kafka/test/CustomProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/spider-commons/spider-common/src/test/java/com/kafka/producer/CustomProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider-commons/spider-common/src/test/java/com/kafka/test/CustomProducerCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/spider-commons/spider-common/src/test/java/com/kafka/producer/CustomProducerCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider-commons/spider-common/src/test/java/com/kafka/test/CustomProducerSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/spider-commons/spider-common/src/test/java/com/kafka/producer/CustomProducerSync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider-commons/spider-common/src/test/java/com/kafka/test/CustomProducerTrans.java" beforeDir="false" afterPath="$PROJECT_DIR$/spider-commons/spider-common/src/test/java/com/kafka/producer/CustomProducerTrans.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider-commons/spider-common/src/test/java/com/kafka/test/MyPartitioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/spider-commons/spider-common/src/test/java/com/kafka/producer/MyPartitioner.java" afterDir="false" />
-    </list>
+    <list default="true" id="7ebae3f5-8caa-4619-b2fd-ee1d33146cda" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
