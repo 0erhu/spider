@@ -15,6 +15,7 @@
         <module>spider-commons</module>
         <module>spider-protos</module>
         <module>spider-web</module>
+        <module>spider-web/springboot-test</module>
     </modules>
 
     <properties>
